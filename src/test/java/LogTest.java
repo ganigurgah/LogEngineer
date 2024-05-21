@@ -3,6 +3,10 @@ import com.anos.logger.types.EntityEnums;
 
 public class LogTest {
 
+    private static void addLog(LogEnginer logEngine, String message){
+        logEngine.info(message);
+    }
+
     public static void main(String[] args) {
         EntityEnums.LoggerLibrary loggerLibrary = EntityEnums.LoggerLibrary.JDK;
         LogEnginer logEnginer = LogEnginer.initialize(LogTest.class, loggerLibrary, null);
@@ -14,11 +18,9 @@ public class LogTest {
                 logEnginer.info(arg);
             }
         } else {
-            logEnginer.info("Test1");
-            logEnginer.info("Test2 dasdasd sad");
-            logEnginer.info("asd Test3");
-            logEnginer.info("Teasds asdst4");
-            logEnginer.error("hata var");
+            for (int i = 0; i < 15000; i++) {
+                addLog(logEnginer, "Hello World "+i);
+            }
         }
     }
 }

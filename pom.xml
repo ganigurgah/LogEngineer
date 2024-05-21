@@ -7,6 +7,23 @@
     <groupId>com.agito</groupId>
     <artifactId>LogEngineer</artifactId>
     <version>1.0</version>
+    <packaging>jar</packaging>
+
+    <name>Log Engineer</name>
+    <description>Initialize JDK Logging or Log4J logging</description>
+    <url>https://github.com/ganigurgah/LogEngineer</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/ganigurgah/LogEngineer.git</url>
+    </scm>
 
     <properties>
         <maven.compiler.source>22</maven.compiler.source>

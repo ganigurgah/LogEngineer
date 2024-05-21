@@ -11,33 +11,33 @@ import java.net.URL;
 /**
  * @author gani.gurgah
  */
-public class LogEnginer {
+public class LogEngineer {
 
     BaseLogger logger;
 
-    LogEnginer() {
+    LogEngineer() {
     }
 
-    public static LogEnginer initialize(Class<?> clazz, LoggerLibrary libraryType, URL configurationFileURL) {
-        LogEnginer enginer = new LogEnginer();
+    private static LogEngineer initialize(Class<?> clazz, LoggerLibrary libraryType, URL configurationFileURL) {
+        LogEngineer engineer = new LogEngineer();
 
         switch (libraryType) {
             case JDK:
             case CONSOLE:
-                enginer.logger = new JdkLogger(clazz, configurationFileURL);
+                engineer.logger = new JdkLogger(clazz, configurationFileURL);
                 break;
             case APACHE:
-                enginer.logger = new ApacheLogger(clazz, configurationFileURL);
+                engineer.logger = new ApacheLogger(clazz, configurationFileURL);
                 break;
         }
-        return enginer;
+        return engineer;
     }
 
-    public static LogEnginer initializeApacheLogger(Class<?> clazz, URL configurationFile) {
+    public static LogEngineer initializeApacheLogger(Class<?> clazz, URL configurationFile) {
         return initialize(clazz, LoggerLibrary.APACHE, configurationFile);
     }
 
-    public static LogEnginer initializeJdkLogger(Class<?> clazz, URL configurationFile) {
+    public static LogEngineer initializeJdkLogger(Class<?> clazz, URL configurationFile) {
         return initialize(clazz, LoggerLibrary.JDK, configurationFile);
     }
 

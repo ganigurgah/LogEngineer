@@ -1,25 +1,25 @@
-import com.anos.logger.LogEnginer;
+import com.anos.logger.LogEngineer;
 import com.anos.logger.types.EntityEnums;
 
 public class LogTest {
 
-    private static void addLog(LogEnginer logEngine, String message){
+    private static void addLog(LogEngineer logEngine, String message){
         logEngine.info(message);
     }
 
     public static void main(String[] args) {
         EntityEnums.LoggerLibrary loggerLibrary = EntityEnums.LoggerLibrary.JDK;
-        LogEnginer logEnginer = LogEnginer.initialize(LogTest.class, loggerLibrary, null);
-        logEnginer.addToThreadContext("userName", "<userName>");
-        logEnginer.addToThreadContext("requestId", "<requestId>");
-        logEnginer.addToThreadContext("wsSessionToken", "<wsSessionToken>");
+        LogEngineer logEngineer = LogEngineer.initializeJdkLogger(LogTest.class,null);
+        logEngineer.addToThreadContext("userName", "<userName>");
+        logEngineer.addToThreadContext("requestId", "<requestId>");
+        logEngineer.addToThreadContext("wsSessionToken", "<wsSessionToken>");
         if (args.length > 0) {
             for (String arg : args) {
-                logEnginer.info(arg);
+                logEngineer.info(arg);
             }
         } else {
             for (int i = 0; i < 15000; i++) {
-                addLog(logEnginer, "Hello World "+i);
+                addLog(logEngineer, "Hello World "+i);
             }
         }
     }

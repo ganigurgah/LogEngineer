@@ -9,7 +9,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>Log Engineer</name>
+    <name>${project.groupId}:${project.artifactId}</name>
     <description>Initialize JDK Logging or Log4J logging</description>
     <url>https://github.com/ganigurgah/LogEngineer</url>
 
@@ -20,9 +20,17 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    <developers>
+        <developer>
+            <name>Gani GÜRGAH</name>
+            <email>ganigurgah@gmail.com</email>
+        </developer>
+    </developers>
 
     <scm>
-        <url>https://github.com/ganigurgah/LogEngineer.git</url>
+        <connection>scm:git:git://github.com/ganigurgah/LogEngineer.git</connection>
+        <developerConnection>scm:git:ssh://github.com:ganigurgah/LogEngineer.git</developerConnection>
+        <url>http://github.com/ganigurgah/LogEngineer/tree/master</url>
     </scm>
 
     <properties>

@@ -23,7 +23,6 @@ public class LogEngineer {
 
         switch (libraryType) {
             case JDK:
-            case CONSOLE:
                 engineer.logger = new JdkLogger(clazz, configurationFileURL);
                 break;
             case APACHE:

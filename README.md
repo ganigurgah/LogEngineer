@@ -1,4 +1,6 @@
 # LogEngineer
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)
 
 Java tabanlı sistemler için geliştirilmiş, log verilerini mühendislik standartlarında işlemeyi ve anlamlandırmayı sağlayan bir araçtır.
 

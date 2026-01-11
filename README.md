@@ -39,6 +39,9 @@ Projenizi kendi Java uygulamanıza dahil ettikten sonra aşağıdaki gibi kullan
 LogEngineer engineer = new LogEngineer();
 engineer.start();
 ```
+## Configuration
+Apache ve JDK default logger için ```resources ``` altında configuration dosyaları bulunmaktadır.
+
 ## Geliştirme
 Katkıda bulunmak için:
 
@@ -50,7 +53,7 @@ Değişikliklerinizi commit edin.
 
 Pull Request açın.
 
-Lisans
+## Lisans
 Bu proje MIT lisansı kapsamında sunulmaktadır.
 
 Geliştirici: [Gani Gürgah](https://linkedin.com/in/ganigurgah).
